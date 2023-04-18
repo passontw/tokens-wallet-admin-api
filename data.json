@@ -1,0 +1,28 @@
+{
+  "id": // session id,
+  "expires_at": // 逾期時間,
+  "authenticated_at": // 登入時間,
+  "authentication_methods": [ // 驗證登入方式
+    {
+      "method": "password", // 登入方式
+      "aal": "aal1",
+      "completed_at": "2023-04-17T00:32:20.265299765Z"
+    }
+  ],
+  "identity": { // user data
+    "id": "179582ef-f9b2-4755-9320-411d1565f133", // user id
+    "traits": { // 客製化欄位
+      "email": "passon.com.tw@gmail.com",  // email
+      "loginVerification": true, 登入是否需要驗證
+      "name": "test" // 使用者名稱
+    },
+  },
+  "devices": [ // 裝置資料
+    {
+      "id": "c1f4b4c3-f710-4187-9294-f8e7a6cd8bd1", // 裝置 id
+      "ip_address": "139.162.86.50", // 登入 IP (如果是 Email 顯示的是server 的 IP) 
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36", // user agent
+      "location": "Tokyo, JP" // 登入位置，如果是 Email 顯示的是 server 的位置
+    }
+  ]
+}

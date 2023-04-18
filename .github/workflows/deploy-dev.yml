@@ -1,0 +1,22 @@
+name: deploy-dev
+
+on:
+  push:
+    branches: 
+      - develop
+
+jobs:
+  do-deployment:
+    # needs: run-test-cases
+    # if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Deploy newest code to dev machine
+      uses: ./.github/actions/run-deploy
+      with:
+        folder-name: tokens-wallet-admin-api
+        branch-name: develop
+        env-value: ${{ secrets.DEV_ENV }}
+        host-name: ${{ secrets.DEV_HOST }}
+        ssh-key: ${{ secrets.SSH_KEY_DEV_VALUE }}
